@@ -21,9 +21,54 @@ passed = false;
 // if (gender === "male")  
 // **sua lógica a partir daqui**
 
+let generalPass
+let barPass
+let runPass
+let swimPass
 
+if (gender == "male" && height > 1.69 && abs > 40 ) {       // Teste Masculino: Altura e abdominais.
+        generalPass = true
+        if (barReps > 5 || barSeconds < 16){                // Teste nas barras.
+            barPass = true
+        }
+        if (runDistance > 2999 && runTime < 721 ){          // Teste De corrida.
+            runPass = true
+        } else if (runDistance > 4999 && runTime < 1201){
+            runPass = true
+        }
+        if (swimDistance > 99 && swimTime < 61){            // Teste de Natação.
+            swimPass = true
+        } else if (diveTime < 31){
+            swimPass = true
+        }
+    }
+
+if (gender == "female" && height > 1.59 && abs > 40 ) {     // Teste Feminino: Altura, abdominais.
+        generalPass = true
+        if (barReps > 4 || barSeconds < 13){                // Teste nas barras.
+            barPass = true
+        }
+        if (runDistance > 3999 && runTime < 901 ){          // Teste De corrida.
+            runPass = true
+        } else if (runDistance > 5999 && runTime < 1321){
+            runPass = true
+        }
+        if (swimDistance > 99 && swimTime < 61){            // Teste de Natação.
+            swimPass = true
+        } else if (diveTime < 31){
+            swimPass = true
+        }
+    }
+if (generalPass && barPass && runPass && swimPass == true){
+    passed = true
+} else {
+    passed = false
+}
 
 
 // Deve conter apenas esse console.log no seu código.
 // Senão os testes não irão funcionar.
 console.log(passed);
+
+
+
