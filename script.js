@@ -1,15 +1,15 @@
 // Variáveis para aplicar os resultados do teste. Não as altere.
 
-gender = process.argv[2]; // Sexo 
-height = process.argv[3]; // Altura
-barReps = process.argv[4]; // Repetições com barra
-barSeconds = process.argv[5]; // Tempo das repetições com barra 
-abs = process.argv[6]; // Abdominais
-runDistance = process.argv[7]; // Distância da corrida
-runTime = process.argv[8]; // Tempo da corrida
-swimDistance = process.argv[9]; // Distância da natação
-swimTime = process.argv[10]; // Tempo da natação
-diveTime = process.argv[11]; // Tempo de mergulho
+let gender = process.argv[2]; // Sexo 
+let height = process.argv[3]; // Altura
+let barReps = process.argv[4]; // Repetições com barra
+let barSeconds = process.argv[5]; // Tempo das repetições com barra 
+let abs = process.argv[6]; // Abdominais
+let runDistance = process.argv[7]; // Distância da corrida
+let runTime = process.argv[8]; // Tempo da corrida
+let swimDistance = process.argv[9]; // Distância da natação
+let swimTime = process.argv[10]; // Tempo da natação
+let diveTime = process.argv[11]; // Tempo de mergulho
 
 let generalPass             // Aprovação de altura e abdominais
 let barPass                 // Aprovação do teste de barras
@@ -61,16 +61,11 @@ if (gender == "female" && height > 1.59 && abs > 40 ) {     // Teste Feminino: A
             swimPass = true
         }
     }
-if (generalPass && barPass && runPass && swimPass == true){
+if (generalPass && barPass && runPass && swimPass){
     passed = true
-} else {
-    passed = false
-}
+} 
 
 
 // Deve conter apenas esse console.log no seu código.
 // Senão os testes não irão funcionar.
 console.log(passed);
-
-
-
