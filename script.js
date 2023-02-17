@@ -11,10 +11,10 @@ swimDistance = process.argv[9]; // Distância da natação
 swimTime = process.argv[10]; // Tempo da natação
 diveTime = process.argv[11]; // Tempo de mergulho
 
-let generalPass
-let barPass
-let runPass
-let swimPass
+let generalPass             // Aprovação de altura e abdominais
+let barPass                 // Aprovação do teste de barras
+let runPass                 // Aprovação do teste de corrida
+let swimPass                // Aprovação do teste de natação
 
 passed = false;
 
