@@ -11,6 +11,11 @@ swimDistance = process.argv[9]; // Distância da natação
 swimTime = process.argv[10]; // Tempo da natação
 diveTime = process.argv[11]; // Tempo de mergulho
 
+let generalPass
+let barPass
+let runPass
+let swimPass
+
 passed = false;
 
 // Importante:
@@ -21,10 +26,7 @@ passed = false;
 // if (gender === "male")  
 // **sua lógica a partir daqui**
 
-let generalPass
-let barPass
-let runPass
-let swimPass
+
 
 if (gender == "male" && height > 1.69 && abs > 40 ) {       // Teste Masculino: Altura e abdominais.
         generalPass = true
